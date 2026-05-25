@@ -1,7 +1,7 @@
 {
   "name": "direnv-vscode-profile",
   "displayName": "direnv VSCode Profile",
-  "description": "Auto-switch VSCode profiles using direnv based on environment variable",
+  "description": "Auto-switch VSCode profiles using direnv and environment variables",
   "author": "Passeriform",
   "publisher": "Passeriform",
   "version": "0.1.0",
