@@ -1,0 +1,1 @@
+Only switch back to default if the last switch was using direnv
