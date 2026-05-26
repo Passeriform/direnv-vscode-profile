@@ -1,17 +1,19 @@
 {
   "compilerOptions": {
-    "incremental": true,
-    "target": "esnext",
-    "module": "esnext",
-    "types": ["vite/client", "node"],
+    "module": "commonjs",
+    "target": "es2017",
+    "lib": ["esnext"],
+    "types": ["node", "mocha"],
+    "outDir": "out",
+    "sourceMap": true,
     "strict": true,
     "allowJs": false,
+    "ignoreDeprecations": "6.0",
 
-    /* Bundler mode */
-    "moduleResolution": "bundler",
+    /* Module resolution */
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "moduleDetection": "force",
     "noEmit": true,
 
     /* Linting */
@@ -21,8 +23,6 @@
     "noFallthroughCasesInSwitch": true,
     "strictNullChecks": true,
     "noImplicitAny": true,
-    "noImplicitThis": true,
-
-  },
-  "include": ["src"]
+    "noImplicitThis": true
+  }
 }

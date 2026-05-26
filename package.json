@@ -1,56 +1,46 @@
 {
   "name": "direnv-vscode-profile",
   "displayName": "direnv VSCode Profile",
-  "description": "Auto-switch VSCode profiles using direnv and environment variables",
-  "author": "Passeriform",
-  "publisher": "Passeriform",
   "version": "0.1.0",
-  "type": "module",
-  "engines": {
-    "vscode": "^1.84.0"
-  },
-  "files": [
-    "dist"
-  ],
-  "homepage": "https://github.com/Passeriform/direnv-vscode-profile.git#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Passeriform/direnv-vscode-profile.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Passeriform/direnv-vscode-profile.git/issues"
-  },
-  "icon": "assets/icon.png",
+  "description": "Auto-switch VSCode profiles using direnv and environment variables",
   "categories": [
     "Other"
   ],
-  "extensionKind": [
-    "workspace"
-  ],
+  "homepage": "https://github.com/Passeriform/direnv-vscode-profile#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Passeriform/direnv-vscode-profile"
+  },
+  "publisher": "passeriform",
+  "main": "./dist/extension.js",
+  "scripts": {
+    "build": "tsup src/extension.ts --dts --external=vscode",
+    "dev": "npm run build -- --watch",
+    "lint": "oxlint",
+    "lint:fix": "oxfmt"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^25.9.1",
+    "@types/vscode": "^1.52.0",
+    "oxfmt": "^0.51.0",
+    "oxlint": "^1.66.0",
+    "oxlint-tsgolint": "^0.23.0",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3"
+  },
   "activationEvents": [
     "onStartupFinished"
   ],
   "extensionDependencies": [
     "mkhl.direnv"
   ],
-  "main": "./dist/extension.cjs",
-  "browser": "./dist/extension.cjs",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "oxlint",
-    "lint:fix": "oxfmt",
-    "test": "vitest",
-    "release": "commit-and-tag-version"
-  },
-  "devDependencies": {
-    "@types/node": "^25.9.1",
-    "@types/vscode": "^1.120.0",
-    "commit-and-tag-version": "^12.7.3",
-    "oxfmt": "^0.51.0",
-    "oxlint": "^1.66.0",
-    "oxlint-tsgolint": "^0.23.0",
-    "typescript": "~6.0.2",
-    "vite": "^8.0.3"
+  "extensionKind": [
+    "workspace"
+  ],
+  "icon": "assets/icon.png",
+  "engines": {
+    "vscode": "^1.52.0"
   }
 }

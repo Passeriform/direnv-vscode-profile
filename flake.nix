@@ -15,8 +15,6 @@
         statix
         deadnix
         nodejs
-        typescript
-        vite
       ];
 
       shellHook = ''
