@@ -28,4 +28,5 @@ jobs:
         uses: HaaLeo/publish-vscode-extension@v2
         with:
           pat: ${{ secrets.VSCODE_MARKETPLACE_PAT }}
-          args: "publish -p $VSCE_TOKEN"
+          registryUrl: https://marketplace.visualstudio.com
+
